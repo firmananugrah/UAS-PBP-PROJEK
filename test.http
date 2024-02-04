@@ -1,0 +1,89 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "ferina22",
+  "password" : "rahasia",
+  "name" : "ferina si tampan"
+}
+###
+
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "ferina22",
+  "password" : "rahasia"
+}
+
+###
+
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: a7135994-496f-463e-bd02-fc2be95b8b6f
+###
+
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: a7135994-496f-463e-bd02-fc2be95b8b6f
+
+{
+  "name" : "firman baru22"
+}
+
+###
+
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization:87392828-8165-4c61-b637-70e007d203da
+
+###
+
+POST http://localhost:3000/api/makanans
+Content-Type: application/json
+Accept: application/json
+Authorization:a7135994-496f-463e-bd02-fc2be95b8b6f
+
+{
+    
+    "makanan": "udang ",
+    "minuman": "apel jus",
+    "paket_murah": "murah meriah",
+    "aneka_salad": "buah ",
+    "jumlah": "5",
+    "harga": "28000"
+}
+
+###
+
+GET http://localhost:3000/api/makanans/9
+Content-Type: application/json
+Accept: application/json
+Authorization:a7135994-496f-463e-bd02-fc2be95b8b6f
+### Update
+
+PUT http://localhost:3000/api/makanans/9
+Content-Type: application/json
+Accept: application/json
+Authorization: a7135994-496f-463e-bd02-fc2be95b8b6f
+
+{
+    "makanan": "iga bakar",
+    "minuman": "jus alpuket",
+    "paket_murah": "paket keluarga",
+    "aneka_salad": "salad buah",
+    "jumlah": "2000",
+    "harga": "2000"
+}
+
+### Delete makanan
+
+DELETE http://localhost:3000/api/makanans/9
+Content-Type: application/json
+Accept: application/json
+Authorization: a7135994-496f-463e-bd02-fc2be95b8b6f
